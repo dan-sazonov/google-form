@@ -3,12 +3,12 @@
 
     function submitGoogleForm(form) {
         try {
-            var data = [].slice.call(form).map(function (control) {
+            const data = [].slice.call(form).map(function (control) {
                 return 'value' in control && control.name ?
                     control.name + '=' + (control.value === undefined ? '' : control.value) :
                     '';
             }).join('&');
-            var xhr = new XMLHttpRequest();
+            let xhr = new XMLHttpRequest();
 
             xhr.open('POST', form.action + '/formResponse', true);
             xhr.setRequestHeader('Accept',
@@ -19,7 +19,6 @@
         } catch (e) {}
 
         form.parentNode.className += ' submitted';
-
         return false;
     }
 }(typeof module === 'undefined' ? window : module.exports);
