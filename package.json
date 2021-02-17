@@ -18,5 +18,8 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/jsdevel/google-form/issues"
+  },
+  "devDependencies": {
+    "eslint": "^7.20.0"
   }
 }
